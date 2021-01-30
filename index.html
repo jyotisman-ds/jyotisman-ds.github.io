@@ -116,18 +116,22 @@
 											<li><b>Beans Classifier</b></li>
 											<span><img src="images/beans_image.png" alt="" /></span>
 												<p>This model learns the Beans images dataset from tensorflow datasets. The images are first processed through an
-													augmentation pipeline before being fed into a tf.data training pipeline. The trained model can take a picture of a bean leaf and predict whether it belongs to one of the two
+													augmentation pipeline before being fed into training. This is all done using a tf.data pipeline for faster training.
+													The trained model can take a picture of a bean leaf and predict whether it belongs to one of the two
 													diseased categories - bean_rust or angular leaf spot or if its healthy.</p>
 											<li><b>Dog Breed Classifier</b></li>
 											<span><img src="images/cocker_spaniel.png" alt="" /></span>
-											<p>This model learns the stanford_dogs dataset from tensorflow datasets. The images are first processed through an
-												augmentation pipeline before being fed into a tf.data pipeline. Since this is a complicated dataset, we use transfer
+											<p>This model uses the stanford_dogs dataset available from tensorflow datasets to train a dog classifier. Like the Beans classifier,
+												the images are again part of a tf.data training pipeline. Since this is a complicated dataset, we use transfer
 												learning to train our model here. I use the InceptionV3 model with the default 'imagenet' weights. Inception is a highly
 												optimized model for image classification benchmarked against the famous imagenet dataset. I set the last few layers of
 												the model to be trainable for my purposes.</p>
 												<li><b>Sentiment Classifier</b></li>
 												<p>This model learns the yelp_polarity_reviews dataset from tensorflow datasets. This is a simple text classifier with
-													1D convolutional and global average pooling layers.</p>
+													1D convolutional and global average pooling layers. It's a binary classifier with review polarities labelled as a
+													negative '0' label and a positive '1' label. The common preprocessing steps for this text dataset was taken care of by
+													the TextVectorization layer from tensorflow which is inherited from keras.layers class. Apart from vectorizing each text
+													 with intger tokens, this layer also limits the max_length of the reviews and also pads them whenever needed.</p>
 													<!-- width = "50" height = "400" -->
 										</ul>
 
