@@ -111,20 +111,19 @@
 		 							<p>Github link : <a href="https://github.com/jyotisman-ds/TensorFlow_projects">TensorFlow</a></p>
 		 							<p>This is a compilation of some of the deep learning projects that I worked on independently.
 										This is by no means an exhaustive list. Its mostly for demonstration of the skills that I have acquired over the years
-										as a learner and an enthusiast.</p>
+										as a learner and an enthusiast. The image classifiers below are also deployed to local browsers using Tensorflow.js </p>
 										<ul>
-											<li>Beans Classifier</li>
+											<li><b>Beans Classifier</b></li>
 												<p>This model learns the Beans images dataset from tensorflow datasets. The images are first processed through an
-													augmentation pipeline before being fed into a tf.data training pipeline. The trained model is deployed on to the
-													browser using tensorflow.js. It can take a picture of a bean leaf and predict whether it belongs to one of the two
+													augmentation pipeline before being fed into a tf.data training pipeline. The trained model can take a picture of a bean leaf and predict whether it belongs to one of the two
 													diseased categories - bean_rust or angular leaf spot or if its healthy.</p>
-											<li>Dog Breed Classifier</li>
+											<li><b>Dog Breed Classifier</b></li>
 											<p>This model learns the stanford_dogs dataset from tensorflow datasets. The images are first processed through an
 												augmentation pipeline before being fed into a tf.data pipeline. Since this is a complicated dataset, we use transfer
 												learning to train our model here. I use the InceptionV3 model with the default 'imagenet' weights. Inception is a highly
 												optimized model for image classification benchmarked against the famous imagenet dataset. I set the last few layers of
 												the model to be trainable for my purposes.</p>
-												<li>Sentiment Classifier</li>
+												<li><b>Sentiment Classifier</b></li>
 												<p>This model learns the yelp_polarity_reviews dataset from tensorflow datasets. This is a simple text classifier with
 													1D convolutional and global average pooling layers.</p>
 										</ul>
