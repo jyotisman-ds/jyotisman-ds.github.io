@@ -114,13 +114,13 @@
 										as a learner and an enthusiast. The image classifiers below are also deployed to local browsers using Tensorflow.js </p>
 										<ul>
 											<li><b>Beans Classifier</b></li>
-											<span><img src="images/beans_image.png" alt="" /></span>
+											<span class = "float-left percent-30"><img src="images/beans_image.png" alt="" /></span>
 												<p>This model learns the Beans images dataset from tensorflow datasets. The images are first processed through an
 													augmentation pipeline before being fed into training. This is all done using a tf.data pipeline for faster training.
 													The trained model can take a picture of a bean leaf and predict whether it belongs to one of the two
 													diseased categories - bean_rust or angular leaf spot or if its healthy.</p>
 											<li><b>Dog Breed Classifier</b></li>
-											<span><img src="images/cocker_spaniel.png" alt="" /></span>
+											<span class = "float-left percent-30"><img src="images/cocker_spaniel.png" alt="" /></span>
 											<p>This model uses the stanford_dogs dataset available from tensorflow datasets to train a dog classifier. Like the Beans classifier,
 												the images are again part of a tf.data training pipeline. Since this is a complicated dataset, we use transfer
 												learning to train our model here. I use the InceptionV3 model with the default 'imagenet' weights. Inception is a highly
